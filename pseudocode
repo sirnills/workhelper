@@ -1,0 +1,19 @@
+#check for the right dir
+if dir == correct
+   proceed....
+else
+  error "please move to an exploded sos directory"
+#nss
+grep {passwd,shadow,group}
+#samba
+clean.sh etc/samba/smb.conf
+#check sssd.conf for debug_level
+grep debug_level
+#check for pam_denials
+grep -i denied var/log/message*
+#check for mcaffee
+grep -i mcaffee ps
+#check oracle
+grep -i oracle ps
+
+   
